@@ -1,15 +1,11 @@
-Where Does My Money Go?
-=======================
+OpenSpending Satellite Site Template - Github
+=============================================
 
-This archive serves two functions: it is the source code for the Where Does My Money Go?
-web site and a template that can be used to easily create custom budget and spending 
-visualization sites.
+This repo is a template that can be used to easily create custom budget and spending 
+visualization sites using data from `OpenSpending`_.
 
-`Where Does My Money Go?`_ aims to promote transparency and citizen engagement through 
-the analysis and visualisation of information about UK public spending. The site was
-launched in 2009 and merged with `OffenerHaushalt`_ in 2010 to form the `OpenSpending`_
-project, which tracks government finance from around the world. Where Does My Money 
-Go continues to exist as a sub-project with a focus on the United Kingom.
+An example of the kind of site that you can create (very quickly) using this
+template is `Where Does My Money Go`_.
 
 .. _`Where Does My Money Go?`: http://wheredoesmymoneygo.org
 .. _`OffenerHaushalt`: http://offenerhaushalt.de
@@ -18,9 +14,9 @@ Go continues to exist as a sub-project with a focus on the United Kingom.
 What is in this repository?
 ---------------------------
 
-Where Does My Money Go runs as an application on top of `OpenSpending`_. All data is
-stored in the platform and the visualizations and search are driven directly from
-its `API`_. 
+Satellite sites runs as simple static websites built out of plain HTML and JS
+and  pulling data from `OpenSpending`_. All data is stored in the OpenSpending
+platform and the visualizations and search are driven directly from its `API`_. 
 
 .. _`OpenSpending`: http://openspending.org
 .. _`API`: http://openspending.org/help/api.html
@@ -115,12 +111,11 @@ calls to OpenSpending, take a few minutes to read up on the technical background
 Where do I find help?
 ---------------------
 
-The Where Does My Money Go? repository is a community-supported resource and there
-are several places where you can call on the community to help you customize it for 
-your needs:
+This repository is a community-supported resource and there are several places
+where you can call on the community to help you customize it for your needs:
 
 * `OpenSpending Developers List <http://lists.okfn.org/mailman/listinfo/openspending-dev>`_
-* `Issue Tracker <https://github.com/openspending/wheredoesmymoneygo.org/issues>`_ at 
+* `Issue Tracker <https://github.com/openspending/satellite-template/issues>`_ at 
   GitHub (please report any problems here.
 * Also join us on the ``#openspending`` channel on the FreeNode IRC network
 
