@@ -1,11 +1,11 @@
-OpenSpending Satellite Site Template - Github
-=============================================
+OpenSpending Satellite Site Template
+====================================
 
 This repo is a template that can be used to easily create custom budget and spending 
 visualization sites using data from `OpenSpending`_.
 
 An example of the kind of site that you can create (very quickly) using this
-template is `Where Does My Money Go`_.
+template is `Where Does My Money Go?`_.
 
 .. _`Where Does My Money Go?`: http://wheredoesmymoneygo.org
 .. _`OffenerHaushalt`: http://offenerhaushalt.de
