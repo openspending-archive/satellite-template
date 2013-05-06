@@ -1,6 +1,7 @@
 pygments: true
 auto: true
 
-title: Where Does My Money Go?
+title: Set title in _config.yml
+tagline: Set tagline in _config.yml
 openspendingjs: 'http://openspending.org/static/openspendingjs'
 
