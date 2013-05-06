@@ -13,3 +13,25 @@ openspendingjs: 'http://openspending.org/static/openspendingjs'
 # http://openspending.org/ukgov-finances-cra is ukgov-finances-cra
 # We use that as default value so the page shows something
 dataset: ukgov-finances-cra
+
+# Bubblemap configuration include bubbletree and map
+# If you don't want bubblemap set this to false and map to false
+# bubblemap : false
+# This shows by default the UK country/regional analysis finances
+bubblemap:
+    title: Bubblemap template
+    tree:
+        dataset: ukgov-finances-cra
+        cuts:
+            - year:2010
+        drilldowns:
+            - cofog1
+            - cofog2
+            - cofog3
+        breakdown: region
+        rootlabel: Total
+    map:
+        url: /img/gbr.svg
+        layer: GBR
+        key: region
+        legend: Expenditure on

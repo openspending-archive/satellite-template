@@ -21,7 +21,11 @@ title: Welcome
     </p>
   </div>
 </div>
+{% if site.bubblemap %}
 <div class="row spaced">
+  <h2 class="span4">
+    <a href="bubbletree-map.html">{{ site.bubblemap.title }}</a>
+  </h2>
   <div class="span4">
     <a href="bubbletree-map.html">
       <img src="/img/bubbles.png" alt="BubbleTree" />
@@ -33,10 +37,8 @@ title: Welcome
       government in total &mdash; and where?
     </p>
   </div>
-  <h2 class="span4">
-    <a href="bubbletree-map.html">Country Regional Analysis</a>
-  </h2>
 </div>
+{% endif %}
 <div class="row spaced well">
   <div class="span7">
     <p>

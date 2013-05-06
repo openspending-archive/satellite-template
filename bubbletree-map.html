@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Country and Regional Analysis
+title: {{ site.bubblemap.title }}
 ---
 
 <script src="{{site.openspendingjs}}/app/bubblemap/bubblemap.js"></script>
@@ -14,22 +14,22 @@ title: Country and Regional Analysis
        new OpenSpending.BubbleMap({
           openspendingjs: '{{site.openspendingjs}}',
           query: {
-            dataset: 'ukgov-finances-cra',
-            cuts: ['year:2010'],
-            drilldowns: ['cofog1', 'cofog2', 'cofog3'],
-            breakdown: 'region',
-            rootNodeLabel: 'Total'
+            dataset: '{{ site.bubblemap.tree.dataset }}',
+            cuts: ['{{ site.bubblemap.tree.cuts | join:"', '"}}'],
+            drilldowns: ['{{ site.bubblemap.tree.drilldowns | join:"', '" }}'],
+            breakdown: '{{ site.bubblemap.tree.breakdown }}',
+            rootNodeLabel: '{{ site.bubblemap.tree.rootlabel }}'
           },
           bubbleStyles: {
-							'cofog-1':  BubbleTreeStyles.Cofog1,
-							'cofog-2':  BubbleTreeStyles.Cofog2,
-							'cofog-3':  BubbleTreeStyles.Cofog3
+		'cofog-1':  BubbleTreeStyles.Cofog1,
+		'cofog-2':  BubbleTreeStyles.Cofog2,
+		'cofog-3':  BubbleTreeStyles.Cofog3
 				  },
           map: {
-            url: '/img/gbr.svg',
-            layerName: 'GBR',
-            keyAttribute: 'region',
-            legendText: 'Expenditure on'
+            url: '{{ site.bubblemap.map.url }}',
+            layerName: '{{ site.bubblemap.map.layer}}',
+            keyAttribute: '{{ site.bubblemap.map.key }}',
+            legendText: '{{ site.bubblemap.map.legend }}'
           },
           table: { show: false }
         });

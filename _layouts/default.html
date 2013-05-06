@@ -16,7 +16,7 @@ layout: blank
     <nav>
       <ul class="nav nav-tabs">
         <li><a href="spending.html">Departmental Spending</a></li>
-        <li><a href="bubbletree-map.html">Country &amp; Regional Analysis</a></li>
+        {% if site.bubblemap %}<li><a href="bubbletree-map.html">{{ site.bubblemap.title }}</a></li>{% endif %}
         <li><a href="dailybread.html">The Daily Bread</a></li>
       </ul>
     </nav>
