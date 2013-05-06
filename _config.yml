@@ -20,6 +20,9 @@ dataset: ukgov-finances-cra
 # This shows by default the UK country/regional analysis finances
 bubblemap:
     title: Bubblemap template
+    description: |-
+        How much is spent on the various functions of 
+        government in total &mdash; and where?
     tree:
         dataset: ukgov-finances-cra
         cuts:
@@ -45,6 +48,9 @@ bubblemap:
 dailybread:
     title: Daily Bread template
     tagline: Costs for the British Taxpayer per Day
+    description: |-
+        See how your daily taxes are divided between the 
+        different parts of government.
     dataset: ukgov-finances-cra
     cuts:
         - year:2010
@@ -66,4 +72,7 @@ dailybread:
 browser:
     title: Browser template
     tagline: Transactions over £ 25,000
+    description: |-
+        Search every transaction over £25,000
+        made by the government's departments.
     dataset: ukgov-25k-spending
