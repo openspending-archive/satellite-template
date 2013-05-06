@@ -8,6 +8,18 @@ tagline: Set tagline in _config.yml
 # Where do you want to load openspendingjs from
 openspendingjs: 'http://openspending.org/static/openspendingjs'
 
+# Frontpage configurations
+# We recommend you leave the openspending clause as is (or close to
+# it as you can, e.g. you can replace "on this site" with
+# "on [your site title]" or translate it.
+frontpage:
+    title: Set frontpage title in _config.yml
+    openspending: |-
+        The data presented on this site comes from
+        <a href="http://openspending.org">OpenSpending</a>, 
+        where you can find information about 
+        government finance from countries across the world.
+
 # Bubblemap configuration include bubbletree and map
 # If you don't want bubblemap set this to false
 # bubblemap : false
@@ -32,6 +44,18 @@ bubblemap:
         layer: GBR
         key: region
         legend: Expenditure on
+
+# Browser configurations
+# If you don't want the transaction browser set this to false
+# browser : false
+# This shows by default the UK deparmental spending over £25,000
+browser:
+    title: Browser template
+    tagline: Transactions over £ 25,000
+    description: |-
+        Search every transaction over £25,000
+        made by the government's departments.
+    dataset: ukgov-25k-spending
 
 # Dailybread configurations
 # If you don't want dailybread set this to false
@@ -62,15 +86,3 @@ dailybread:
         label: Your tax
         default: £8,621
     loadingtext: loading javascript libraries
-
-# Browser configurations
-# If you don't want the transaction browser set this to false
-# browser : false
-# This shows by default the UK deparmental spending over £25,000
-browser:
-    title: Browser template
-    tagline: Transactions over £ 25,000
-    description: |-
-        Search every transaction over £25,000
-        made by the government's departments.
-    dataset: ukgov-25k-spending
