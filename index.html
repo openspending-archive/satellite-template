@@ -1,14 +1,47 @@
 ---
 layout: default
-title: Welcome
 ---
 
+<h1 class="page-header main-header">{{ site.frontpage.title }}</h1>
 
-<h1 class="page-header main-header">How is your tax money spent?</h1>
-
+{% if site.bubblemap %}
 <div class="row spaced">
   <h2 class="span4">
-    <a href="dailybread.html">The Daily Bread</a>
+    <a href="bubbletree-map.html">{{ site.bubblemap.title }}</a>
+  </h2>
+  <div class="span4">
+    <a href="bubbletree-map.html">
+      <img src="/img/bubbles.png" alt="BubbleTree" />
+    </a>
+  </div>
+  <div class="span4">
+    <p>
+      {{ site.bubblemap.description }}
+    </p>
+  </div>
+</div>
+{% endif %}
+{% if site.browser %}
+<div class="row spaced">
+  <h2 class="span4">
+    <a href="browser.html">{{ site.browser.title }}</a>
+  </h2>
+  <div class="span4">
+    <a href="browser.html">
+      <img src="/img/browser.png" alt="Browser" />
+    </a>
+  </div>
+  <div class="span4">
+    <p>
+      {{ site.browser.description }}
+    </p>
+  </div>
+</div>
+{% endif %}
+{% if site.dailybread %}
+<div class="row spaced">
+  <h2 class="span4">
+    <a href="dailybread.html">{{ site.dailybread.title }}</a>
   </h2>
   <div class="span4">
     <a href="dailybread.html">
@@ -17,33 +50,15 @@ title: Welcome
   </div>
   <div class="span4">
     <p>
-      See how your daily taxes are divided between the 
-      different parts of government.
+      {{ site.dailybread.description }}
     </p>
   </div>
 </div>
-<div class="row spaced">
-  <div class="span4">
-    <a href="bubbletree-map.html">
-      <img src="/img/bubbles.png" alt="BubbleTree" />
-    </a>
-  </div>
-  <div class="span4">
-    <p>
-      How much is spent on the various functions of 
-      government in total &mdash; and where?
-    </p>
-  </div>
-  <h2 class="span4">
-    <a href="bubbletree-map.html">Country Regional Analysis</a>
-  </h2>
-</div>
+{% endif %}
 <div class="row spaced well">
   <div class="span7">
     <p>
-    Where Does My Money Go? is part of <a href="http://openspending.org">OpenSpending</a>, 
-      where you can find information about 
-      government finance from countries across the world.
+      {{ site.frontpage.openspending }}
     </p>
   </div>
   <div class="span4 pull-right">

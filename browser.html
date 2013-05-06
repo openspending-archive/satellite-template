@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Departmental Spending
 ---
 
-<h2 class="page-header">Departmental Spending <small> Transactions over £ 25,000</small></h2>
+<h2 class="page-header">{{ site.browser.title }} {% if site.browser.tagline %}<small>{{ site.browser.tagline }}</small>{% endif %}</h2>
 
 <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
 
@@ -27,7 +26,7 @@ title: Departmental Spending
     var config = {
       endpoint: 'http://openspending.org/',
       target: '#browser',
-      dataset: 'ukgov-25k-spending'
+      dataset: '{{ site.browser.dataset }}'
     };
     var browser = new OpenSpending.App.SpendBrowser(config);
     browser.initialize();
