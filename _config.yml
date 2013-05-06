@@ -1,7 +1,15 @@
 pygments: true
 auto: true
 
+# Set the title, tagline of the site
 title: Set title in _config.yml
 tagline: Set tagline in _config.yml
+
+# Where do you want to load openspendingjs from
 openspendingjs: 'http://openspending.org/static/openspendingjs'
 
+# Datasets on openspending.org have identifiers (slugs)
+# For example the identifier for is the dataset that lives at
+# http://openspending.org/ukgov-finances-cra is ukgov-finances-cra
+# We use that as default value so the page shows something
+dataset: ukgov-finances-cra
