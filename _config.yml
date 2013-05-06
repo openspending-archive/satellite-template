@@ -15,7 +15,7 @@ openspendingjs: 'http://openspending.org/static/openspendingjs'
 dataset: ukgov-finances-cra
 
 # Bubblemap configuration include bubbletree and map
-# If you don't want bubblemap set this to false and map to false
+# If you don't want bubblemap set this to false
 # bubblemap : false
 # This shows by default the UK country/regional analysis finances
 bubblemap:
@@ -69,6 +69,10 @@ dailybread:
         default: £8,621
     loadingtext: loading javascript libraries
 
+# Browser configurations
+# If you don't want the transaction browser set this to false
+# browser : false
+# This shows by default the UK deparmental spending over £25,000
 browser:
     title: Browser template
     tagline: Transactions over £ 25,000
