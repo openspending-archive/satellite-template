@@ -41,6 +41,24 @@ title: Welcome
   </div>
 </div>
 {% endif %}
+{% if site.browser %}
+<div class="row spaced">
+  <h2 class="span4">
+    <a href="browser.html">{{ site.browser.title }}</a>
+  </h2>
+  <div class="span4">
+    <a href="browser.html">
+      <img src="/img/browser.png" alt="Browser" />
+    </a>
+  </div>
+  <div class="span4">
+    <p>
+      Search every transaction over £25,000
+      made by the UK's departments.
+    </p>
+  </div>
+</div>
+{% endif %}
 <div class="row spaced well">
   <div class="span7">
     <p>
