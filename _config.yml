@@ -35,3 +35,30 @@ bubblemap:
         layer: GBR
         key: region
         legend: Expenditure on
+
+# Dailybread configurations
+# If you don't want dailybread set this to false
+# dailybread : false
+# This shows by default the UK country/regional analysis finances
+# Unfortunately this is really coupled with UK taxes and would require
+# some coding if it were to work for other countries
+dailybread:
+    title: Daily Bread template
+    tagline: Costs for the British Taxpayer per Day
+    dataset: ukgov-finances-cra
+    cuts:
+        - year:2010
+    drilldowns:
+        - cofog1
+        - cofog2
+        - cofog3
+    breakdown: region
+    rootlabel: Total
+    salary:
+        label: Salary
+        default: £22,000
+        inputrequest: Select your salary
+    tax:
+        label: Your tax
+        default: £8,621
+    loadingtext: loading javascript libraries
