@@ -96,7 +96,7 @@ make.
   configuration options, mostly regarding page generation, are available for Jekyll.
 * The JavaScript initializations for each of the widgets need to be customized; in 
   particular the dataset name needs to be set and an appropriate set of break down
-  dimensions needs to be set for the BubbleTree and DailyBread.
+  dimensions needs to be set for the BubbleTree and DailyBread. The most common configurations for these widgets can be done in ``_config.yml``
 * Adapt the style sheet in ``css/style.css`` to use your own theming; in particular 
   fonts and colorization.
 * Replace ``img/logo.png`` to set a custom logo.
