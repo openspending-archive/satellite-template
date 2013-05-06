@@ -36,7 +36,7 @@ currently available for OpenSpending:
   the effort.
 * ``dailybread.html`` contains the Daily Bread custom tax viewer, which breaks down
   government expenditure over the approximate tax contribution of the visitor.
-* ``spending.html`` is a search interface for transactional spending information, used 
+* ``browser.html`` is a search interface for transactional spending information, used 
   for the UK's departmental spend in this example. This is useful for datasets which are 
   too unstructured for proper aggregation but contain interesting information at a
   detailed level.

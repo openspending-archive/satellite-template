@@ -15,7 +15,7 @@ layout: blank
     </div>
     <nav>
       <ul class="nav nav-tabs">
-        <li><a href="spending.html">Departmental Spending</a></li>
+        {% if site.browser %}<li><a href="browser.html">{{ site.browser.title }}</a></li>{% endif %}
         {% if site.bubblemap %}<li><a href="bubbletree-map.html">{{ site.bubblemap.title }}</a></li>{% endif %}
         {% if site.dailybread %}<li><a href="dailybread.html">{{ site.dailybread.title }}</a></li>{% endif %}
       </ul>

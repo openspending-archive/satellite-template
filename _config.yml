@@ -62,3 +62,8 @@ dailybread:
         label: Your tax
         default: £8,621
     loadingtext: loading javascript libraries
+
+browser:
+    title: Browser template
+    tagline: Transactions over £ 25,000
+    dataset: ukgov-25k-spending
