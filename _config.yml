@@ -1,6 +1,88 @@
 pygments: true
 auto: true
 
-title: Where Does My Money Go?
+# Set the title, tagline of the site
+title: Set title in _config.yml
+tagline: Set tagline in _config.yml
+
+# Where do you want to load openspendingjs from
 openspendingjs: 'http://openspending.org/static/openspendingjs'
 
+# Frontpage configurations
+# We recommend you leave the openspending clause as is (or close to
+# it as you can, e.g. you can replace "on this site" with
+# "on [your site title]" or translate it.
+frontpage:
+    title: Set frontpage title in _config.yml
+    openspending: |-
+        The data presented on this site comes from
+        <a href="http://openspending.org">OpenSpending</a>, 
+        where you can find information about 
+        government finance from countries across the world.
+
+# Bubblemap configuration include bubbletree and map
+# If you don't want bubblemap set this to false
+# bubblemap : false
+# This shows by default the UK country/regional analysis finances
+bubblemap:
+    title: Bubblemap template
+    description: |-
+        How much is spent on the various functions of 
+        government in total &mdash; and where?
+    tree:
+        dataset: ukgov-finances-cra
+        cuts:
+            - year:2010
+        drilldowns:
+            - cofog1
+            - cofog2
+            - cofog3
+        breakdown: region
+        rootlabel: Total
+    map:
+        url: /img/gbr.svg
+        layer: GBR
+        key: region
+        legend: Expenditure on
+
+# Browser configurations
+# If you don't want the transaction browser set this to false
+# browser : false
+# This shows by default the UK deparmental spending over £25,000
+browser:
+    title: Browser template
+    tagline: Transactions over £ 25,000
+    description: |-
+        Search every transaction over £25,000
+        made by the government's departments.
+    dataset: ukgov-25k-spending
+
+# Dailybread configurations
+# If you don't want dailybread set this to false
+# dailybread : false
+# This shows by default the UK country/regional analysis finances
+# Unfortunately this is really coupled with UK taxes and would require
+# some coding if it were to work for other countries
+dailybread:
+    title: Daily Bread template
+    tagline: Costs for the British Taxpayer per Day
+    description: |-
+        See how your daily taxes are divided between the 
+        different parts of government.
+    dataset: ukgov-finances-cra
+    cuts:
+        - year:2010
+    drilldowns:
+        - cofog1
+        - cofog2
+        - cofog3
+    breakdown: region
+    rootlabel: Total
+    salary:
+        label: Salary
+        default: £22,000
+        inputrequest: Select your salary
+    tax:
+        label: Your tax
+        default: £8,621
+    loadingtext: loading javascript libraries
