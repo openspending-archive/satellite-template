@@ -5,6 +5,11 @@ auto: true
 title: Set title in _config.yml
 tagline: Set tagline in _config.yml
 
+# Where is the template located (if it's not in the root)
+# Remove the '#' from the next line and update the path if you have
+# a subdirectory
+# subdirectory: '/mysatellitesite'
+
 # Where do you want to load openspendingjs from
 openspendingjs: 'http://openspending.org/static/openspendingjs'
 
