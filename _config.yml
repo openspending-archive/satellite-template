@@ -23,6 +23,7 @@ frontpage:
 # Bubblemap configuration include bubbletree and map
 # If you don't want bubblemap set this to false
 # bubblemap : false
+# If you don't include map configurations, only the BubbleTree will be shown
 # This shows by default the UK country/regional analysis finances
 bubblemap:
     title: Bubblemap template
