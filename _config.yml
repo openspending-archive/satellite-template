@@ -67,8 +67,8 @@ browser:
 # If you don't want dailybread set this to false
 # dailybread : false
 # This shows by default the UK country/regional analysis finances
-# Unfortunately this is really coupled with UK taxes and would require
-# some coding if it were to work for other countries
+# Taxman returns non-standard responses so the dailybread only works with
+# taxman responses like the one for the UK
 dailybread:
     title: Daily Bread template
     tagline: Costs for the British Taxpayer per Day
@@ -76,8 +76,9 @@ dailybread:
         See how your daily taxes are divided between the 
         different parts of government.
     dataset: ukgov-finances-cra
-    cuts:
-        - year:2010
+    country: gb
+    year: 2010
+    symbol: £
     drilldowns:
         - cofog1
         - cofog2
@@ -86,9 +87,12 @@ dailybread:
     rootlabel: Total
     salary:
         label: Salary
-        default: £22,000
+        minimum: 10000
+        maximum: 200000
+        step: 10
+        default: 22000
         inputrequest: Select your salary
     tax:
         label: Your tax
-        default: £8,621
+        default: 8621
     loadingtext: loading javascript libraries
