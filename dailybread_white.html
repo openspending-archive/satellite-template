@@ -55,13 +55,26 @@ title: The Daily Bread
   var db_init = function db_init() {
     $('#preloader .txt').html('loading data');
 
-    var db = new OpenSpending.DailyBread($('#dailybread'));
+
+    var db = new OpenSpending.DailyBread($('#dailybread'), {
+    {% if site.dailybread -%}
+      country: '{{site.dailybread.country}}',
+      symbol: '{{site.dailybread.symbol}}',
+      taxman: {year: '{{site.dailybread.year}}'},
+      {% if site.dailybread.salary -%}
+      minimumsalary: {{site.dailybread.salary.minimum}},
+      maximumsalary: {{site.dailybread.salary.maximum}},
+      salarystep: {{site.dailybread.salary.step}},
+      defaultsalary: {{site.dailybread.salary.default}}
+      {% endif %}
+      {% endif %}
+    });
 
     new OpenSpending.Aggregator({
       apiUrl: 'http://openspending.org/api',
       dataset: '{{ site.dailybread.dataset }}',
       drilldowns: ['{{ site.dailybread.drilldowns | join:"', '" }}'],
-      cuts: ['{{ site.dailybread.cuts | join:"', '"}}'],
+      cuts: ['year:{{site.dailybread.year}}']{% if site.dailybread.cuts %}+['{{ site.dailybread.cuts | join:"', '"}}']{% endif %},
       rootNodeLabel: '{{ site.dailybread.rootlabel }}',
       breakdown: '{{ site.dailybread.breakdown }}',
       callback: function (data) { db_load_data(db, data); }
