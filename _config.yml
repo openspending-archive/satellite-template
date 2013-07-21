@@ -10,6 +10,9 @@ tagline: Set tagline in _config.yml
 # a subdirectory
 # subdirectory: '/mysatellitesite'
 
+# Set your Google Analytics Tracking Code
+#ga_tracking_code: UA-8271754-8
+
 # Where do you want to load openspendingjs from
 openspendingjs: 'http://openspending.org/static/openspendingjs'
 
