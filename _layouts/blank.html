@@ -22,11 +22,13 @@
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
   {{ content }}
 
+  {% if site.ga_tracking_code -%}
   <script>
-    var _gaq=[['_setAccount','UA-8271754-8'],['_trackPageview']];
+    var _gaq=[['_setAccount','{{ site.ga_tracking_code }}'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
+  {% endif %}
 </body>
 </html>
