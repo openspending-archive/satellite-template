@@ -71,9 +71,14 @@ A good tutorial for Windows is available `here`_.
 After that, you can simply build the site or even run a local web server by running
 this command from the repository root directory::
 
+  jekyll serve --watch
+
+
+If your jekyll version is less than ``1.0``, run this command instead of the above::
+
   jekyll --server --auto
 
-If you cannot install jekyll for some reason, you can still experiment with the site
+Even if you cannot install jekyll for some reason, you can still experiment with the site
 by deploying its contents after each change.
 
 The easiest way to deploy the site is via GitHub pages. To use them, simply adapt the
